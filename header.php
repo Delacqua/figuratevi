@@ -7,15 +7,16 @@
 
 	    <meta name="viewport" content="width=device-width">
 
-	    <!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137729994-1"></script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137729994-3"></script>
 		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
 
-			gtag('config', 'UA-137729994-1');
+		  gtag('config', 'UA-137729994-3');
 		</script>
+
 
 		<title>Figuratevi</title>
 

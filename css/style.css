@@ -57,7 +57,7 @@ a {
 body {
   position: relative;
   font-family: arial, sans-serif;
-  font-size: 1em;
+  font-size: 1.1em;
   line-height: 1em;
   color: black;
   -webkit-font-smoothing: antialiased;
@@ -272,7 +272,7 @@ nav {
     -moz-osx-font-smoothing: grayscale; }
   .content p {
     font-family: arial, sans-serif;
-    font-size: 1em;
+    font-size: 1.1em;
     line-height: 1em;
     color: black;
     -webkit-font-smoothing: antialiased;
@@ -285,6 +285,8 @@ nav {
     margin-bottom: 15px; }
   .content li {
     width: 55%; }
+  .content .maps {
+    margin-top: 25px; }
 
 /* ------- Slide --------*/
 .contentSlide {
@@ -356,7 +358,7 @@ nav {
   .news-item p {
     margin-top: 0.5em;
     font-family: arial, sans-serif;
-    font-size: 1em;
+    font-size: 1.1em;
     line-height: 1em;
     color: black;
     -webkit-font-smoothing: antialiased;
