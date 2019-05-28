@@ -17,14 +17,7 @@
 			gtag('config', 'UA-137729994-1');
 		</script>
 
-		<title>Tieffeu<?php 
-			if(!is_front_page())
-				{ echo " - ";the_title(); } 
-				else {
-					 echo " - Teatro Figura Umbro";
-				}
-			?>
-		</title>
+		<title>Figuratevi</title>
 
 		<?php wp_head(); ?>
 

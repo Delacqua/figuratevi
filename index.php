@@ -1,35 +1,47 @@
+<?php /* Template Name: Index */ ?>
+
 <?php get_header(); ?>
 
-<?php $home = get_template_directory_uri(); ?>
+<?php $home = get_stylesheet_directory_uri();?>
 
-    <div class="container">
-        
-        <div class="top">
-            <div class="main">
 
-                <?php include 'content/headerLogo.php' ?> <!-- header -->
-
-            </div>
-        </div>
-
+    <div class="container containerSfondo">
         <div class="middle">
-            <div class="main">
+            <div class="sinistra">
 
-                <?php include 'content/menu.php' ?> <!-- menu -->
+                <div class="menuIndex menuIndexS">
+                    <a href="http://www.figuratevi.net/wordpress/valnerina/">
+                        <img src="<?= $home ?>/img/Mvalnerina.jpg">
+                    </a>
+                    
+                </div>
+                
+            </div>
             
+            <div class="destra">
+
+                <div class="menuIndex menuIndexD">
+                    <!--a href="http://www.figuratevi.net/wordpress/perugia/"-->
+                    <a href="<?= $home ?>/perugia/">
+                        <img src="<?= $home ?>/img/Mperugia.jpg">
+                    </a>
+                    
+                </div>
+                
             </div>
 
-        </div>
-
-        <div class="bottom">
-            <div class="main">
-
-                <?php include 'content/footerContatti.php' ?> <!-- Footer -->
-                            
+            <div class="centro">
+                <a href="https://youtu.be/na20hxY9pp8" class="menuVideo" target="_blank">
+                    video
+                </a>
             </div>
 
-        </div>
+            <div class="footerMenu">
+                <nav class="menuFooter" id="menuFooter"></nav>
+            </div>
         
+        </div>
+
     </div>
   
 

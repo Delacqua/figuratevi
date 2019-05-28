@@ -12,7 +12,7 @@ class ConfigAdmin {
 		register_nav_menus(
 			array(
 			  'menuIndex' => __( 'Menu Index' ),
-			  'menuProgetti' => __( 'Menu Progetti' )
+			  'menuInterno' => __( 'Menu Interno' )
 			)
 		);
 	}
@@ -21,22 +21,6 @@ class ConfigAdmin {
 		remove_menu_page('edit.php'); //post
 		remove_menu_page( 'edit-comments.php' );//Comments
 		remove_menu_page( 'tools.php' ); //Tools
-	}
-
-	private static function registerWidget() {
-
-		if (function_exists('register_sidebar')) {
-			  register_sidebar(array(
-			    'name' => 'Widgetized Area',
-			    'id'   => 'widgetized-area',
-			    'description'   => 'This is a widgetized area.',
-			    'before_widget' => '<div id="%1$s" class="widget %2$s">',
-			    'after_widget'  => '</div>',
-			    'before_title'  => '<h4>',
-			    'after_title'   => '</h4>'
-			  ));
-
-			}
 	}
 
 
@@ -50,6 +34,8 @@ class ConfigAdmin {
 	}
 
 	public static function loadWidget() {
-		self::registerWidget();
+		
 	}
+
+	
 }

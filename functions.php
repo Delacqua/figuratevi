@@ -32,32 +32,36 @@ function loadConfig() {
 
 add_action( 'wp_enqueue_scripts', 'loadConfig');
 
-// silencer script  ----------------
-function jquery_migrate_silencer() {
-    // create function copy
-    $silencer = '<script>window.console.logger = window.console.log; ';
-    // modify original function to filter and use function copy
-    $silencer .= 'window.console.log = function(tolog) {';
-    // bug out if empty to prevent error
-    $silencer .= 'if (tolog == null) {return;} ';
-    // filter messages containing string
-    $silencer .= 'if (tolog.indexOf("Migrate is installed") == -1) {';
-    $silencer .= 'console.logger(tolog);} ';
-    $silencer .= '}</script>';
-    return $silencer;
+
+function registrar_news() {
+	$descricao = 'Figuratevi News';
+	$singular = 'New';
+	$plural = 'News';
+
+	$labels = array(
+		'name' => $plural,
+		'singular_name' => $singular,
+		'view_item' => 'Ver ' . $singular,
+		'edit_item' => 'Editar ' . $singular,
+		'new_item' => 'Novo ' . $singular,
+		'add_new_item' => 'Adicionar novo ' . $singular
+	);
+
+	$supports = array(
+		'title',
+		'editor',
+	);
+
+	$args = array(
+		'labels' => $labels,
+		'description' => $descricao,
+		'public' => true,
+		'menu_icon' => 'dashicons-media-text',
+		'supports' => $supports
+	);
+
+
+	register_post_type( 'news', $args);	
 }
 
-// for the frontend, use script_loader_tag filter
-//add_filter('script_loader_tag','jquery_migrate_load_silencer', 10, 2);
-function jquery_migrate_load_silencer($tag, $handle) {
-    if ($handle == 'jquery-migrate') {
-        $silencer = jquery_migrate_silencer();
-        // prepend to jquery migrate loading
-        $tag = $silencer.$tag;
-    }
-    return $tag;
-}
-
-// for the admin, hook to admin_print_scripts
-//add_action('admin_print_scripts','jquery_migrate_echo_silencer');
-function jquery_migrate_echo_silencer() {echo jquery_migrate_silencer();}
+add_action('init', 'registrar_news');
