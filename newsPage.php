@@ -9,7 +9,9 @@
 
             <?php include_once dirname(__FILE__)."/content/headerLogo.php"?>
 
-            <?php include_once dirname(__FILE__)."/content/menuInterno.php"?>
+            <div class="menuNav">
+              <?php include_once dirname(__FILE__)."/content/menuInterno.php"?>
+            </div>
 
             <div class="content">
                 <?php include_once dirname(__FILE__)."/content/news.php"?>

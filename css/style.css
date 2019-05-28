@@ -261,7 +261,9 @@ nav {
       background: #09b111; }
 
 .content {
-  width: 100%; }
+  margin-top: 15px;
+  width: 100%;
+  padding-bottom: 25px; }
   .content h2 {
     margin-top: 50px;
     font-family: arial, sans-serif;
@@ -269,7 +271,10 @@ nav {
     line-height: 1em;
     color: black;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; }
+    -moz-osx-font-smoothing: grayscale;
+    max-width: 900px;
+    margin-right: auto;
+    margin-left: auto; }
   .content p {
     font-family: arial, sans-serif;
     font-size: 1.1em;
@@ -277,7 +282,10 @@ nav {
     color: black;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    margin-top: 0.6em; }
+    margin-top: 0.6em;
+    max-width: 900px;
+    margin-right: auto;
+    margin-left: auto; }
   .content strong {
     font-weight: bolder; }
   .content ul {
@@ -346,7 +354,13 @@ nav {
   margin-top: 25px; }
 
 .news-item {
-  margin-top: 25px; }
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  border: 5px solid red;
+  border-radius: 25px;
+  background: #ffe426;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
   .news-item h2 {
     font-family: arial, sans-serif;
     font-size: 3em;
@@ -354,7 +368,8 @@ nav {
     color: black;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #424242; }
+    color: #262626;
+    margin-top: 0; }
   .news-item p {
     margin-top: 0.5em;
     font-family: arial, sans-serif;
@@ -363,7 +378,7 @@ nav {
     color: black;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #424242;
+    color: #262626;
     font-weight: bold; }
 
 /*# sourceMappingURL=style.css.map */
