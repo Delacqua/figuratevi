@@ -107,6 +107,80 @@
 }
 
 .slidePerugia {
+	li {
+		overflow: hidden;
+	}
+
+	li figure img{
+		max-height: 600px;
+		-webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	    animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	}
+}
+
+.slideValnerina {
+	margin-bottom: 20px;
+	li {
+		overflow: hidden;
+		box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.1);
+	}
+
+	li figure img{
+		max-height: 600px;
+	}
+}
+
+.slide-left {
+	-webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slide-right {
+	-webkit-animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 .slideContainer {
@@ -122,6 +196,7 @@
 .buttonL , .buttonR{
 	width: 5%;
 	@include flexCenter;
+	margin: 5px;
 }
 
 .seta {
@@ -149,7 +224,7 @@
 	margin-top: 10px;
 	padding-top: 10px;
 	padding-bottom: 5px;
-	border: 5px solid red;
+	border: 5px solid rgb(255, 51, 0);
 	border-radius: 25px;
 	background: lighten( $sfondoColore, 5% );
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
