@@ -230,7 +230,7 @@
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 	h2 {
-		@include fontTitoloG();
+		@include fontTitoloG(0.9);
 		color: #262626;
 		margin-top: 0;
 	}
@@ -239,6 +239,10 @@
 		margin-top: 0.5em;
 		@include fontNormaleG();
 		color: #262626;
-		font-weight: bold;
+	}
+
+	a {
+		text-decoration: underline;
+		color: blue;
 	}
 }

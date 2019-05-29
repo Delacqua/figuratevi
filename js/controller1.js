@@ -1,3 +1,5 @@
+/*  Controlle Page Slide  */
+
 var arrayImg = makeArrayImg();
 let slide = new Slide(arrayImg);
 
