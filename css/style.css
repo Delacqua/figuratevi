@@ -73,7 +73,6 @@ body {
   position: relative;
   width: 100%;
   max-width: 1920px;
-  height: 100vh;
   padding: 0;
   margin: 0; }
 
@@ -122,7 +121,7 @@ body {
 /* ------- LAYOUT interno --------*/
 .main {
   width: 90%;
-  height: 100vh;
+  min-height: 100vh;
   margin-left: 5%;
   display: -webkit-flex;
   display: flex;
@@ -436,5 +435,19 @@ nav {
   .news-item a {
     text-decoration: underline;
     color: blue; }
+
+/*------ Contatti ------ */
+.contentContatti {
+  margin: auto;
+  margin-top: 50px;
+  width: 80%;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .contentContatti div:nth-child(1) {
+    margin-left: 10%; }
+  .contentContatti div:nth-child(2) {
+    margin-right: 10%; }
 
 /*# sourceMappingURL=style.css.map */
