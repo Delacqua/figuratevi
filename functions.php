@@ -31,3 +31,4 @@ function loadConfig() {
 }
 
 add_action( 'wp_enqueue_scripts', 'loadConfig');
+

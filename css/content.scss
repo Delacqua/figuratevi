@@ -111,23 +111,28 @@
 		overflow: hidden;
 	}
 
-	li figure img{
+	li figure img {
 		max-height: 600px;
-		-webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	    animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	}
 }
 
 .slideValnerina {
 	margin-bottom: 20px;
 	li {
-		overflow: hidden;
-		box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.1);
+		overflow: hidden;			
 	}
 
-	li figure img{
-		max-height: 600px;
+	li figure {
+		box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.2);
 	}
+
+	li figure img {
+		max-height: 600px;
+		object-fit: scale-down !important;
+		-webkit-box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.2);
+		box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.2);
+	}
+
 }
 
 .slide-left {
