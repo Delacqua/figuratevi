@@ -3,7 +3,7 @@
                 the_post();
 ?>
 
-    <div>
+    <div class="contentBase">
 
         <?php
             the_content(); 

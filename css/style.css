@@ -129,13 +129,16 @@ body {
   flex-direction: column;
   flex-wrap: nowrap; }
 
+@media screen and (max-width: 320px) {
+  .main {
+    width: 100%;
+    margin: 0;
+    margin-top: 5px; } }
 .header {
-  width: 100%;
-  height: 160px; }
+  width: 100%; }
 
 nav {
-  width: 100%;
-  height: 35px; }
+  width: 100%; }
 
 .content {
   width: 100%; }
@@ -160,9 +163,6 @@ nav {
   justify-content: flex-end; }
 
 /* ------- Nav --------*/
-.menuNav {
-  height: 50px; }
-
 .menuVideo {
   display: -webkit-flex;
   display: flex;
@@ -187,11 +187,15 @@ nav {
     display: -webkit-flex;
     display: flex;
     justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
     height: 100%; }
     .menuInterno ul li {
       width: 14%;
-      height: 100%;
+      min-width: 100px;
+      height: 40px;
+      margin-top: 5px;
       display: -webkit-flex;
       display: flex;
       justify-content: center;
@@ -233,38 +237,47 @@ nav {
   flex-wrap: wrap;
   align-items: flex-end;
   justify-content: space-between; }
-  .header img {
-    height: 100%;
-    width: auto; }
+  .header .logo {
+    width: 95%; }
+    .header .logo img {
+      width: 100%;
+      height: auto; }
   .header .citta {
-    width: 25vw;
-    height: 5vw;
+    position: relative;
+    width: 100%;
     display: -webkit-flex;
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    align-items: flex-end; }
-    .header .citta a {
-      padding: 15px;
-      margin-left: 5%;
-      width: 50%;
-      min-width: 20px;
-      height: 20%;
-      min-height: 20px; }
-      .header .citta a img {
-        width: 100%;
-        height: 100%; }
-    .header .citta a:nth-child(1) {
-      width: 60%;
-      background: #0b91dd; }
-    .header .citta a:nth-child(2) {
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap; }
+    .header .citta .valnerina,
+    .header .citta .perugia {
+      position: relative;
+      width: 120px;
+      height: 45px;
+      padding: 0 10px 0 10px;
+      background: #0b91dd;
+      display: -webkit-flex;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .header .citta .perugia {
       background: #09b111; }
+    .header .citta img {
+      width: 100%;
+      height: auto; }
 
+@media screen and (min-width: 800px) {
+  .header .logo {
+    width: 50%; }
+  .header .citta {
+    width: 50%; } }
 .content {
   margin-top: 15px;
   width: 100%;
   padding-bottom: 25px; }
-  .content h2 {
+  .content h2, .content h3, .content h4 {
     margin-top: 50px;
     font-family: arial, sans-serif;
     font-size: 2.4em;
@@ -293,9 +306,16 @@ nav {
     margin-bottom: 15px; }
   .content li {
     width: 55%; }
-  .content .maps {
-    margin-top: 25px; }
 
+@media screen and (max-width: 800px) {
+  .content h2, .content h3, .content h4 {
+    font-size: 1.8em; }
+  .content p {
+    font-size: 0.88em; }
+
+  .contentBase {
+    padding-left: 5px;
+    padding-right: 5px; } }
 /* ------- Slide --------*/
 .contentSlide {
   display: -webkit-flex;
@@ -403,11 +423,23 @@ nav {
 .buttonL .seta {
   text-indent: 4px; }
 
+@media screen and (max-width: 800px) {
+  .seta {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 25px;
+    text-indent: 3px;
+    border: 2px solid #0072bc; }
+
+  .buttonL .seta {
+    text-indent: 0; } }
 /*------ news ------ */
 .news-lista {
   margin-top: 25px; }
 
 .news-item {
+  margin: auto;
   margin-top: 10px;
   padding-top: 10px;
   padding-bottom: 5px;
@@ -415,7 +447,7 @@ nav {
   border-radius: 25px;
   background: #ffe426;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
-  .news-item h2 {
+  .news-item h2, .news-item h3, .news-item h4 {
     font-family: arial, sans-serif;
     font-size: 2.7em;
     line-height: 1em;
@@ -437,6 +469,14 @@ nav {
     text-decoration: underline;
     color: blue; }
 
+@media screen and (max-width: 800px) {
+  .news-item {
+    width: 90%; }
+    .news-item h2, .news-item h3, .news-item h4 {
+      font-size: 1.8em; }
+    .news-item p {
+      padding: 1px;
+      font-size: 0.88em; } }
 /*------ Contatti ------ */
 .contentContatti {
   margin: auto;
@@ -444,11 +484,26 @@ nav {
   width: 80%;
   display: -webkit-flex;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center; }
   .contentContatti div:nth-child(1) {
-    margin-left: 10%; }
+    margin-left: 10%;
+    margin: auto; }
   .contentContatti div:nth-child(2) {
-    margin-right: 10%; }
+    margin-right: 10%;
+    margin: auto; }
+
+@media screen and (max-width: 800px) {
+  .contentContatti {
+    margin-top: 10px;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    flex-direction: column; }
+    .contentContatti div:nth-child(1) {
+      text-align: center; }
+    .contentContatti div:nth-child(2) {
+      margin-top: 25px; } }
 
 /*# sourceMappingURL=style.css.map */

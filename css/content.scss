@@ -15,36 +15,51 @@
 	align-items: flex-end;
   	justify-content: space-between;
 
-	img {
-		height: 100%;
-		width: auto;
-	}
+  	.logo {
+  		width: 95%;
+
+  		img {
+			width: 100%;
+			height: auto;
+		}
+  	}
 
 	.citta {
-		width: 25vw;
-		height: 5vw;
-		@include flex;
+		position: relative;
+		width: 100%;
+		@include flexCenter;
+		justify-content: space-around;
 		flex-wrap: nowrap;
-		justify-content: flex-end;
-		align-items: flex-end;
 
-		a {
-			padding: 15px;
-			margin-left: 5%;
-			width: 50%;
-			min-width: 20px;
-			height: 20%;
-			min-height: 20px;
-
-			img {
-				width: 100%;
-				height: 100%;
-			}
+		.valnerina,
+		.perugia	{
+			position: relative;
+			width: 120px;
+			height: 45px;
+			padding: 0 10px 0 10px;
+			background: #0b91dd;
+			@include flexCenter;
 		}
 
-		a:nth-child(1) { width: 60%; background: #0b91dd; }
-		a:nth-child(2) { background: #09b111; }
+		.perugia { background: #09b111; }
+
+		img {
+			width: 100%;
+			height: auto;
+		}
 	}
+}
+
+@media screen and (min-width: 800px) {
+	.header {
+		.logo {
+		  	width: 50%;
+		}
+		.citta {
+		  	width: 50%;
+		}		
+	}
+
 }
 
 .content {
@@ -52,7 +67,7 @@
   	width: 100%;
   	padding-bottom: 25px;
 
-  	h2 {
+  	h2,h3,h4 {
   		margin-top: 50px;
   		@include fontTitoloG(0.8);
   		max-width: 900px;
@@ -64,7 +79,7 @@
   		@include fontNormaleG();
   		margin-top: 0.6em;
   		max-width: 900px;
-  		  		margin-right: auto; 
+  		margin-right: auto; 
   		margin-left: auto;
   	}
 
@@ -80,12 +95,24 @@
   	li {
   		width: 55%;
   	}
-
-  	.maps {
-  		margin-top: 25px;
-  	}
 }
 
+@media screen and (max-width: 800px) {
+	.content {
+		h2,h3,h4 {
+			font-size: $font-titolo-size * 0.6;
+		}
+		p {
+			font-size: $font-base-size * 0.8;
+		}
+	}
+
+	.contentBase {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+}
 
 /* ------- Slide --------*/
 
@@ -133,6 +160,12 @@
 		box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.2);
 	}
 
+}
+
+@media screen and (max-width: 800px) {
+  .slidePerugia {
+
+  }
 }
 
 .slide-left {
@@ -220,12 +253,28 @@
 	text-indent: 4px;
 }
 
+@media screen and (max-width: 800px) {
+  	.seta {
+	  	width: 20px;
+		height: 20px;
+		line-height: 20px;
+		font-size: 25px;
+		text-indent: 3px;
+		border: 2px solid #0072bc;
+	}
+
+  	.buttonL .seta {
+		text-indent: 0;
+	}
+}
+
 /*------ news ------ */
 .news-lista {
 	margin-top: 25px;
 }
 
 .news-item {
+	margin: auto;
 	margin-top: 10px;
 	padding-top: 10px;
 	padding-bottom: 5px;
@@ -234,7 +283,7 @@
 	background: lighten( $sfondoColore, 5% );
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-	h2 {
+	h2,h3,h4 {
 		@include fontTitoloG(0.9);
 		color: #262626;
 		margin-top: 0;
@@ -252,15 +301,45 @@
 	}
 }
 
+@media screen and (max-width: 800px) {
+	.news-item {
+		width: 90%;
+
+		h2,h3,h4 {
+			font-size: $font-titolo-size * 0.6;
+		}
+		p {
+			padding: 1px;
+			font-size: $font-base-size * 0.8;
+		}
+	}
+
+}
+
 /*------ Contatti ------ */
+
 .contentContatti {
 	margin: auto;
 	margin-top: 50px;
   	width: 80%;
   	@include flex;
+  	flex-direction: row;
   	justify-content: space-between;
   	align-items: center;
 
-  	div:nth-child(1) { margin-left: 10% }
-  	div:nth-child(2) { margin-right: 10% }
+  	div:nth-child(1) { margin-left: 10%; margin: auto;}
+  	div:nth-child(2) { margin-right: 10%; margin: auto;}
+}
+
+@media screen and (max-width: 800px) {
+  	.contentContatti {
+  		margin-top: 10px;
+  		width: 100%;
+  		padding-left: 5px;
+  		padding-right: 5px;
+  		flex-direction: column;
+
+  		div:nth-child(1) { text-align: center; }
+  		div:nth-child(2) { margin-top: 25px; }
+	}
 }
