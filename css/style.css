@@ -235,7 +235,7 @@ nav {
       margin-top: 5px;
       padding-right: 10px;
       padding-left: 10px; } }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1400px) {
   .menuInterno ul li {
     max-width: 14%; } }
 /* ------- Content --------*/
