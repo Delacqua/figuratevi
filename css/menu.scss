@@ -54,8 +54,6 @@
 			min-width: 60px;
 			max-width: 160px;
 			height: 40px;
-			margin-top: 5px;
-			margin-left: 3px;
 			@include flexCenter;
 	    	text-shadow: -1px 1px black, 1px 1px black, 1px 1px black, 1px -1px black;
 	    	font-weight: bolder;
@@ -75,20 +73,37 @@
 }
 
 @media screen and (max-width: 800px) {
-.menuInterno {
+	.menuInterno {
 
-	ul {
-		justify-content: center;
-	
-		li{
-			flex-basis: auto;
-			min-width: 50px;
-			padding-right: 10px;
-			padding-left: 10px;
+		ul {
+			justify-content: center;
+		
+			li{
+				flex-basis: auto;
+				min-width: 50px;
+				margin-left: 3px;
+				margin-top: 5px;
+				padding-right: 10px;
+				padding-left: 10px;
+			}
+
 		}
 
 	}
 
 }
+
+@media screen and (min-width: 1600px) {
+	.menuInterno {
+
+		ul {
+		
+			li{
+				max-width: 14%;
+			}
+
+		}
+
+	}
 
 }
