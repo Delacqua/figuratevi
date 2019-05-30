@@ -38,6 +38,7 @@
 			height: 45px;
 			padding: 0 10px 0 10px;
 			background: #0b91dd;
+			border: 1px solid $border-color;
 			@include flexCenter;
 		}
 

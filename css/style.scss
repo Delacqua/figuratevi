@@ -10,6 +10,8 @@ $line-height: 1em;
 
 $sfondoColore: #ffe10c;
 
+$border-color: #404040;
+
 // ------ mixin  ------- 
 @mixin fontNormaleG($misure: 1) {
 	font-family: $font-base;

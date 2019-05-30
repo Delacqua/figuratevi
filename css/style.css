@@ -195,21 +195,23 @@ nav {
     display: -webkit-flex;
     display: flex;
     justify-content: space-between;
-    justify-content: center;
     flex-wrap: wrap;
     width: 100%;
     height: 100%; }
     .menuInterno ul li {
-      width: 14%;
-      min-width: 100px;
+      flex-basis: 14%;
+      min-width: 60px;
+      max-width: 160px;
       height: 40px;
       margin-top: 5px;
+      margin-left: 3px;
       display: -webkit-flex;
       display: flex;
       justify-content: center;
       align-items: center;
       text-shadow: -1px 1px black, 1px 1px black, 1px 1px black, 1px -1px black;
-      font-weight: bolder; }
+      font-weight: bolder;
+      border: 1px solid #404040; }
     .menuInterno ul li:nth-child(1n) {
       background: #ff0000; }
     .menuInterno ul li:nth-child(2n) {
@@ -225,6 +227,14 @@ nav {
     .menuInterno ul li:nth-child(7n) {
       background: #a800d2; }
 
+@media screen and (max-width: 800px) {
+  .menuInterno ul {
+    justify-content: center; }
+    .menuInterno ul li {
+      flex-basis: auto;
+      min-width: 50px;
+      padding-right: 10px;
+      padding-left: 10px; } }
 /* ------- Content --------*/
 .noselect {
   -webkit-touch-callout: none;
@@ -266,6 +276,7 @@ nav {
       height: 45px;
       padding: 0 10px 0 10px;
       background: #0b91dd;
+      border: 1px solid #404040;
       display: -webkit-flex;
       display: flex;
       justify-content: center;
