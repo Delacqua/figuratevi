@@ -98,12 +98,20 @@ body {
 .sinistra {
   position: relative;
   width: 40%;
-  margin: 2% 5% 5% 0; }
+  margin: 2% 5% 5% 0;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .destra {
   position: relative;
   width: 40%;
-  margin: 2% 0 5% 5%; }
+  margin: 2% 0 5% 5%;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .centro {
   position: relative;

@@ -46,12 +46,14 @@ body {
   position: relative;
   width: 40%;
   margin: 2% 5% 5% 0;
+  @include flexCenter;
 }
 
 .destra {
   position: relative;
   width: 40%;
   margin: 2% 0 5% 5%;
+  @include flexCenter;
 }
 
 .centro {
