@@ -170,7 +170,6 @@ nav {
 .menuIndexD {
   justify-content: flex-end; }
 
-/* ------- Nav --------*/
 .menuVideo {
   display: -webkit-flex;
   display: flex;
@@ -187,6 +186,7 @@ nav {
   text-shadow: -1px 1px black, 1px 1px black, 1px 1px black, 1px -1px black;
   font-size: 1.4em; }
 
+/* ------- Nav --------*/
 .menuInterno {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -235,6 +235,11 @@ nav {
       margin-top: 5px;
       padding-right: 10px;
       padding-left: 10px; } }
+@media screen and (max-width: 400px) {
+  .menuInterno ul li {
+    min-width: 40px;
+    height: 30px;
+    font-size: 0.77em; } }
 @media screen and (min-width: 1400px) {
   .menuInterno ul li {
     max-width: 14%; } }

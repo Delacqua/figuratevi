@@ -17,12 +17,6 @@
 .menuIndexS { justify-content: flex-start;}
 .menuIndexD { justify-content: flex-end;}
 
-
-/* ------- Nav --------*/
-
-.menuNav {
-}
-
 .menuVideo {
 	@include flexCenter;
 	width: 110px;
@@ -35,6 +29,11 @@
 	background-size: contain;
 	text-shadow: -1px 1px black, 1px 1px black, 1px 1px black, 1px -1px black;
 	font-size: 1.4em;
+}
+
+/* ------- Nav --------*/
+
+.menuNav {
 }
 
 .menuInterno {
@@ -85,6 +84,23 @@
 				margin-top: 5px;
 				padding-right: 10px;
 				padding-left: 10px;
+			}
+
+		}
+
+	}
+
+}
+
+@media screen and (max-width: 400px) {
+	.menuInterno {
+
+		ul {
+		
+			li{
+				min-width: 40px;
+				height: 30px;
+				font-size: $font-base-size * 0.7;
 			}
 
 		}
